@@ -1,14 +1,13 @@
-﻿using AssemblyToReference;
-using Cache;
-using Cache.Fody;
-using Fody;
-using System;
-using System.Collections.Generic;
-using System.Reflection;
-using Xunit;
-
-namespace Tests
+﻿namespace Tests
 {
+    using AssemblyToReference;
+    using Cache;
+    using Cache.Fody;
+    using Fody;
+    using System;
+    using System.Reflection;
+    using Xunit;
+
     public class UnitTest
     {
         static TestResult testResult;

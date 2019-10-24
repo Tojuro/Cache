@@ -1,12 +1,10 @@
-﻿using Cache;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AssemblyToReference
+﻿namespace AssemblyToReference
 {
+    using Cache.Interfaces;
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+
     public class RuntimeCache : ICacheProvider
     {
         public RuntimeCache()

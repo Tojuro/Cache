@@ -19,4 +19,8 @@
     <PackageReference Include="FodyPackaging" Version="2.3.20" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Cache.Interfaces\Cache.Interfaces.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -3,7 +3,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Cache
+namespace Cache.Interfaces
 {
     public interface ICacheProvider
     {
