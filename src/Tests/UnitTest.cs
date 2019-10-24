@@ -1,12 +1,14 @@
-﻿namespace Tests
+﻿using AssemblyToReference;
+using Cache;
+using Cache.Fody;
+using Fody;
+using MongoCacheProvider;
+using System;
+using System.Reflection;
+using Xunit;
+
+namespace Tests
 {
-    using AssemblyToReference;
-    using Cache;
-    using Cache.Fody;
-    using Fody;
-    using System;
-    using System.Reflection;
-    using Xunit;
 
     public class UnitTest
     {
@@ -16,7 +18,7 @@
         {
             var weavingTask = new ModuleWeaver();
             testResult = weavingTask.ExecuteTestRun("AssemblyToReference.dll", false);
-            new CacheProvider(new RuntimeCache());
+            new CacheProvider(new MongoCache());
         }
 
         [Fact]

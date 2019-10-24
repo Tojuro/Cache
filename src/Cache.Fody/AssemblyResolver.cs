@@ -1,13 +1,11 @@
-﻿using Mono.Cecil;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Cache.Fody
+﻿namespace Cache.Fody
 {
+    using Mono.Cecil;
+    using System;
+    using System.Collections.Generic;
+    using System.IO;
+    using System.Linq;
+
     public class AssemblyResolver : IAssemblyResolver
     {
         Dictionary<string, string> referenceDictionary;

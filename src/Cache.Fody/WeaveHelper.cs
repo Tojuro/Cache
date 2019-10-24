@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
+using Cache.Interfaces;
 using Fody;
 using Mono.Cecil;
 using Mono.Cecil.Cil;
@@ -389,7 +390,7 @@ namespace Cache.Fody
             //Import Reference 
             TypeDefinition mdlClass = methodDefinition.DeclaringType;
             var refModule = ReferenceFinder.CacheAssembly.MainModule;
-            var refInterface = refModule.GetType("Cache.ICacheProvider");
+            var refInterface = typeof(ICacheProvider); // refModule.GetType("Cache.ICacheProvider");
 
             //define the field we store the value in 
             FieldDefinition field = new FieldDefinition(
