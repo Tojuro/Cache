@@ -358,7 +358,8 @@ namespace Cache.Fody
 
                 for (int i = 0; i < methodDefinition.Parameters.Count + methodDefinition.GenericParameters.Count; i++)
                 {
-                    builder.Append(string.Format("_{{{0}}}", i));
+                    var name = methodDefinition.Parameters[i].ParameterType.Name;
+                    builder.Append(string.Format("_{0}|{{{1}}}", name.Substring(0, Math.Min(name.Length, 2)), i));
                 }
             }
 
