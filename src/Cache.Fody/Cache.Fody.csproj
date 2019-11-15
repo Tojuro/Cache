@@ -23,5 +23,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Cache.Interfaces\Cache.Interfaces.csproj" />
+    <ProjectReference Include="..\Cache\Cache.csproj" />
   </ItemGroup>
 </Project>
